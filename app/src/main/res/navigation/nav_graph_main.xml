@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/FeedbackListFragment">
+
+    <fragment
+        android:id="@+id/FeedbackListFragment"
+        android:name="com.pub.feedbackapp.ui.main.feedbacklist.FeedbackListFragment"
+        android:label="@string/feedback"
+        tools:layout="@layout/fragment_feedback_list">
+        <action
+            android:id="@+id/action_FeedbackListFragment_to_FeedbackDetailFragment"
+            app:destination="@id/FeedbackDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FeedbackDetailFragment"
+        android:name="com.pub.feedbackapp.ui.main.feedbackdetail.FeedbackDetailFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_feedback_detail">
+        <action
+            android:id="@+id/action_FeedbackDetailFragment_to_FeedbackListFragment"
+            app:destination="@id/FeedbackListFragment" />
+    </fragment>
+</navigation>
